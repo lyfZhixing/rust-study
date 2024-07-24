@@ -32,7 +32,8 @@ fn main() {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
-                println!("You win!");
+                println!("You win! Pass any key to exit.");
+                io::stdin().read_line(&mut String::new()).unwrap();
                 break; // 跳出循环
             },
         }
